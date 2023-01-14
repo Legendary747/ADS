@@ -15,10 +15,10 @@ class Solution {
     if (budget <= 0 || items == null) return new HashSet<Item>();
     int amount = items.size();
     int[][] dp = new int[amount+1][budget+1];
-    for (int i = 0; i < amount; i++) {
+    for (int i = 0; i <= amount; i++) {
       dp[i][0] = 0;
     }
-    for (int i = 0; i < budget; i++) {
+    for (int i = 0; i <= budget; i++) {
       dp[0][i] = 0;
     }
     List<Item> itemList = items.stream().collect(Collectors.toList());
